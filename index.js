@@ -17,13 +17,6 @@ class UglifyESOptimizer {
   }
 
   optimize(file) {
-    if (this.ignored(file.path)) {
-      return {
-        data: file.data,
-        map: file.map && `${file.map}`,
-      };
-    }
-
     const options = Object.assign({}, this.options);
     if (file.map) {
       options.sourceMap = {
