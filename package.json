@@ -1,5 +1,5 @@
 {
-  "name": "uglify-js-brunch",
+  "name": "uglify-es-brunch",
   "version": "1.0.0",
   "description": "Adds Uglify ES minifying support to brunch.",
   "author": "Kevin Stenerson <kevin@rapiditynetworks.com>",
