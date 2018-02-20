@@ -1,6 +1,6 @@
 {
   "name": "uglify-es-brunch",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Adds Uglify ES minifying support to brunch.",
   "author": "Kevin Stenerson <kevin@rapiditynetworks.com>",
   "homepage": "https://github.com/rapiditynetworks/uglify-es-brunch",
