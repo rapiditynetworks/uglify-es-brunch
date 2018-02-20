@@ -38,6 +38,7 @@ class UglifyESOptimizer {
       };
     }
 
+    delete options.ignored;
     const res = uglify.minify(file.data, options);
     if (res.error) throw formatError(res.error);
     if (!res.map) return {data: res.code};
