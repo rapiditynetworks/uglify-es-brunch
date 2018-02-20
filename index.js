@@ -18,6 +18,19 @@ class UglifyESOptimizer {
 
   optimize(file) {
     const options = Object.assign({}, this.options);
+
+    try {
+      if (this.options.ignored && this.options.ignored.test(file.path)) {
+        const result = {
+          data: file.data,
+          map: file.map ? file.map.toString() : null,
+        };
+        return Promise.resolve(result);
+      }
+    } catch (e) {
+      return Promise.reject(`error checking ignored files to uglify ${e}`);
+    }
+
     if (file.map) {
       options.sourceMap = {
         content: JSON.stringify(file.map),
